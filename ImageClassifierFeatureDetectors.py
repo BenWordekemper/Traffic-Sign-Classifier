@@ -56,7 +56,7 @@ while True:
     success, img = cap.read()
     imgOriginal = img2.copy()
     img2 = cv2.cvtColor(img2,cv2.COLOR_BGR2GRAY)
-    id = indID(img2,desList)
+    id = findID(img2,desList)
     if id != -1:
         cv2.putText(imgOriginal, classNames[id], (50,50), cv2.FONT_hERSHEY_COMPLEX,1,(0,0,255),2)
     cv2.imshow('img2', imgOriginal)
